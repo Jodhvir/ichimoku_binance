@@ -1,0 +1,6 @@
+numpy==1.23.3
+pandas==1.5.0
+plotly==5.9.0
+Requests==2.32.3
+streamlit==1.37.1
+TA_Lib==0.4.24
