@@ -125,7 +125,8 @@ def main():
         # Get data for selected symbol
         
         df['EMA-200'] = ta.ema(df['Close'], length=200)
-        df['RSI'] = round(ta.rsi(df['Close'], length=14)),1)
+        df['RSI'] = round(ta.rsi(df['Close'], length=14), 1)
+
 	
         last_rsi = df['RSI'].iloc[-1]
         df = extend_numeric_index(df, periods=26)
