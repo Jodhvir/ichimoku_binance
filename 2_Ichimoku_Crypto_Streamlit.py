@@ -1,7 +1,8 @@
 # Use this script to generate Ichimoku cloud chart
 
 import pandas as pd
-import json, requests, talib
+import json, requests
+import pandas_ta as ta
 import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
@@ -123,8 +124,9 @@ def main():
 
         # Get data for selected symbol
         
-        df['EMA-200'] = talib.EMA(df['Close'],200)
-        df['RSI'] = round(talib.RSI(df['Close'], timeperiod=14),1)
+        df['EMA-200'] = ta.ema(df['Close'], length=200)
+        df['RSI'] = round(ta.rsi(df['Close'], length=14)),1)
+	
         last_rsi = df['RSI'].iloc[-1]
         df = extend_numeric_index(df, periods=26)
         df = get_ichimoku_cloud(df)
