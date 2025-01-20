@@ -93,7 +93,7 @@ def main():
         with st.form(key='Form_1'):
             symbol = str(st.text_input('Enter the Coin-Pair *')).upper()
             interval = st.selectbox('Select interval *', ('1M','1w','3d','1d','12h','8h','6h','4h','2h','1h','30m','15m','5m','3m','1m'))
-            n = st.number_input("Enter a number", min_value=0, max_value=500, value=120, step=1)
+            n = st.number_input("Enter a number", min_value=0, max_value=500, value=180, step=1)
             selected_option = st.selectbox('Future?', options)
             submit = st.form_submit_button(label='Submit')
     
