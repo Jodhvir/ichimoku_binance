@@ -42,9 +42,7 @@ def get_data_from_binance(symbol,interval,future):
     # df.drop(df.tail(1).index, inplace=True) # drop last row since the candle has not Closed yet
     return df
 
-'''
-Extend the Ichimoku Datarame so that it incudes future values of Leading Span A & Leading Span B
-'''
+#Extend the Ichimoku Datarame so that it incudes future values of Leading Span A & Leading Span B
 def extend_numeric_index(df, periods=26):
     # Get the last index value
     last_index = df.index[-1]
